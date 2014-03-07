@@ -7,6 +7,16 @@ nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($sco
 
   $http.get("project/").success(function(data) {
     $scope.projects = data;
-    console.log($scope.projects);
+    $scope.select2Options = {
+      multiple: true,
+    };
   });
+
+  $scope.filterEmployees = function() {
+    $http.get("employee/filter", {
+      project: $scope.selectedProject
+    }).success(function(data, status, headers, config) {
+      $scope.employees = data;
+    });
+  };
 }]);

@@ -1,8 +1,10 @@
 <div ng-controller="DirectoryCtrl" ng-app="nulogyFacePageApp">
 
-  <select ui-select2 ng-model="selectedProject">
-    <option ng-repeat="project in projects">{{ project.name }}</option>
-  </select>
+  <form role="form" ng-keyup="$event.keyCode == 13 ? filterEmployees() : null">
+    <select multiple ui-select2="select2Options" ng-model="selectedProject">
+      <option ng-repeat="project in projects">{{ project.name }}</option>
+    </select>
+  </form>
 
   <ul class="person-list">
     <li class="person" ng-repeat="employee in employees">
@@ -12,27 +14,3 @@
     </li>
   </ul>
 </div>
-<!--<div id="employee-directory-container" class="container" ng-app="nulogyFacePageApp" ng-controller="DirectoryCtrl">
-  <select ui-select2 ng-model="selectedProject">
-    <option ng-repeat="project in projects">{{ project.name }}</option>
-  </select>
-  <ul>
-    <li>
-
-      <div class="panel panel-default panel-primary" ng-repeat="employee in employees">
-        <div class="panel-heading panel-task-heading">
-          {{ employee.firstName }} {{ employee.lastName }}
-        </div>
-
-        <div class="panel-body">
-	  <img ng-src="images/display_pictures/{{ employee.displayPicturePath }}">
-        </div>
-
-        <div class="panel-footer">
-          {{ employee.email }}
-        </div>
-      </div>
-
-    </li>
-  </ul>
-</div>-->
