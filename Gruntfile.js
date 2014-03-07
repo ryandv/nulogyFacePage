@@ -29,7 +29,8 @@ module.exports = function (grunt) {
    */
 
   var cssFilesToInject = [
-    'linker/**/*.css'
+    'linker/**/*.css',
+    'bower_components/**/dist/**/*.css'
   ];
 
 
@@ -59,7 +60,8 @@ module.exports = function (grunt) {
     // *->    put other dependencies here   <-*
 
     // All of the rest of your app scripts imported here
-    'linker/**/*.js'
+    'linker/**/*.js',
+    'bower_components/**/dist/**/*.js'
   ];
 
 
