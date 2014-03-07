@@ -6,7 +6,7 @@
 
   <ul class="person-list">
     <li class="person" ng-repeat="employee in employees">
-    <img src="http://api.randomuser.me/0.3.1/portraits/men/2.jpg" alt="" class="person-image">
+    <img ng-src="images/{{ employee.displayPicturePath && employee.displayPicturePath || 'http://api.randomuser.me/0.3.1/portraits/men/2.jpg' }}" alt="" class="person-image">
     <p class="person-name">{{ employee.firstName }} {{ employee.lastName }}</p>
     <p class="person-team">{{ employee.department }}</p>
     </li>

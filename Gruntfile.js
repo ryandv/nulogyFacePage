@@ -29,7 +29,8 @@ module.exports = function (grunt) {
    */
 
   var cssFilesToInject = [
-    'linker/**/*.css',
+    'linker/styles/all.css',
+    'linker/styles/select2.css',
     'bower_components/**/dist/**/*.css'
   ];
 
