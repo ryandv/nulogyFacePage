@@ -1,0 +1,79 @@
+/* ------------------------------------------- */
+/* Chosen Select Box                           */
+/* ------------------------------------------- */
+
+.chosen-container
+  position: relative
+  display: block
+  max-width: grid-cols(13)
+  padding-bottom: vertical-units(1)
+  padding-right: grid-cols(1) + $grid-gutter
+  margin: vertical-units(3) auto
+  border: none
+  border-bottom: $light-border
+  outline: none
+  +bg-img("icon-magnifier", 68px)
+  background-repeat: no-repeat
+  background-position: right center
+  color: $nutral-dark
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    top: 18px
+    right: 25px
+    width: 27px
+    height: 27px
+    background-color: white
+    border-radius: 100px
+    +bg-img("icon-spinner", 20px)
+    background-repeat: no-repeat
+    background-position: -1px -1px
+  &.is-loading:after
+    -webkit-animation: spin 0.5s linear infinite
+
+.chosen-container-multi
+
+.chosen-container-drop
+
+.chosen-container-active
+
+.chosen-choices
+  list-style: none
+  
+  input
+    @extend .banner-text
+    border: none
+    width: 100%
+    height: vertical-units(5)
+    padding: 0 $grid-gutter/2
+    box-sizing: border-box
+    color: inherit
+    background-color: transparent
+    outline: none
+
+.chosen-drop
+  @extend .intro-text
+  position: absolute
+  top: 100%
+  margin-top: 1px
+  display: none
+  width: 100%
+  box-sizing: border-box
+  padding: vertical-units(2) $grid-gutter
+  max-height: vertical-units(50)
+  overflow: auto
+  background-color: white
+  box-sizing: border-box
+  .chosen-container-active &,
+  .chosen-container:focus &
+    display: block
+  
+.chosen-results
+  list-style: none
+
+.active-result
+
+.group-result
+
+.group-option

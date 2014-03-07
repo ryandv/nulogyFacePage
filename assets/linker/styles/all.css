@@ -1,0 +1,429 @@
+@import url(normalize.css);
+@import url(http://fonts.googleapis.com/css?family=Domine|Open+Sans:400italic,700italic,400,700,300|Fjalla+One);
+/* line 11, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/globals/_placeholders.sass */
+.person-name, .person-team {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* ------------------------------------------- */
+/* Layout                                      */
+/* ------------------------------------------- */
+/* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_layout.sass */
+body {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 36px 20px; }
+
+/* ------------------------------------------- */
+/* Typography                                  */
+/* ------------------------------------------- */
+/* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #413e3b;
+  text-align: left;
+  line-height: 24px; }
+
+/*-- Body Text ------------------------------- */
+/* line 22, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.intro-text, .chosen-drop {
+  font-size: 22px;
+  line-height: 36px; }
+  @media (max-width: 500px) {
+    /* line 22, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .intro-text, .chosen-drop {
+      font-size: 18px;
+      line-height: 24px; } }
+
+/* line 29, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.body-text, .blockquote, .person-name {
+  font-size: 18px;
+  line-height: 24px; }
+  @media (max-width: 500px) {
+    /* line 29, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .body-text, .blockquote, .person-name {
+      font-size: 16px; } }
+
+/* line 35, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.sub-text, .button, .button--link, .button--form, .button--play {
+  font-size: 16px;
+  line-height: 24px; }
+
+/* line 39, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.small-text {
+  font-size: 14px;
+  line-height: 24px; }
+
+/* line 43, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.fine-print {
+  font-size: 12px;
+  line-height: 12px;
+  margin: 6px auto; }
+
+/*-- Headings -------------------------------- */
+/* line 49, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.page-heading, .section-heading, .sub-heading, .small-heading {
+  font-family: Domine, Georgia, serif;
+  font-weight: 100;
+  letter-spacing: -1px;
+  color: #1b5c8c; }
+
+/* line 55, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.page-heading {
+  font-size: 42px;
+  letter-spacing: -2px;
+  line-height: 60px;
+  margin-bottom: 12px; }
+  @media (max-width: 500px) {
+    /* line 55, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .page-heading {
+      font-size: 36px;
+      letter-spacing: -1px;
+      line-height: 48px; } }
+
+/* line 65, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.section-heading {
+  font-size: 36px;
+  line-height: 48px; }
+  @media (max-width: 500px) {
+    /* line 65, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .section-heading {
+      font-size: 30px;
+      line-height: 36px; } }
+
+/* line 72, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.sub-heading {
+  font-size: 24px;
+  line-height: 36px; }
+
+/* line 76, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.small-heading {
+  font-size: 20px;
+  line-height: 24px; }
+
+/*-- Banner Text ----------------------------- */
+/* line 81, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.banner-text, .chosen-choices input {
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 300; }
+  @media (max-width: 1200px) {
+    /* line 81, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .banner-text, .chosen-choices input {
+      font-size: 40px;
+      line-height: 48px; } }
+  @media (max-width: 650px) {
+    /* line 81, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .banner-text, .chosen-choices input {
+      font-size: 36px;
+      line-height: 36px; } }
+  @media (max-width: 500px) {
+    /* line 81, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .banner-text, .chosen-choices input {
+      font-size: 28px;
+      line-height: 36px; } }
+
+/* line 95, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.banner-sub-text {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300; }
+  @media (max-width: 500px) {
+    /* line 95, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .banner-sub-text {
+      font-size: 28px;
+      line-height: 36px; } }
+
+/*-- Stats Text ------------------------------ */
+/*-- Block Quote ----------------------------- */
+/* line 111, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.blockquote {
+  font-style: italic;
+  margin-left: 45px;
+  margin-bottom: 36px;
+  padding-left: 45px;
+  padding-right: 45px;
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: -8px -8px; }
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    /* line 111, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .blockquote {
+      background-image: url("../images/presentation/icon-quote@2x.png"); } }
+  @media screen and (-webkit-max-device-pixel-ratio: 1.9), screen and (max-resolution: 191dpi) {
+    /* line 111, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .blockquote {
+      background-image: url("../images/presentation/icon-quote.png"); } }
+  /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/globals/_mixins.sass */
+  .lt-ie9 .blockquote {
+    background-image: url("../images/presentation/icon-quote.png"); }
+  @media (max-width: 500px) {
+    /* line 111, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+    .blockquote {
+      margin-left: 0;
+      padding: 0;
+      padding-top: 48px;
+      background-position: center top; } }
+
+/*-- OR -------------------------------------- */
+/* line 129, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+.or {
+  font-size: 14px;
+  display: block;
+  width: 45px;
+  margin: 0 auto;
+  padding: 5px 0;
+  margin-bottom: 36px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  border-top: 1px solid #413e3b;
+  border-bottom: 1px solid #413e3b; }
+
+/*-- Text Selection Colors ------------------- */
+/* line 144, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+::-moz-selection {
+  background-color: #ffffaa;
+  color: black; }
+
+/* line 148, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_typography.sass */
+::selection {
+  background-color: #ffffaa;
+  color: black; }
+
+/* ------------------------------------------- */
+/* Animation                                   */
+/* ------------------------------------------- */
+@-webkit-keyframes spin {
+  /* line 7, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_animation.sass */
+  to {
+    -webkit-transform: rotate(359deg); } }
+
+/* ------------------------------------------- */
+/* Buttons and Links                           */
+/* ------------------------------------------- */
+/* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+.button, .button--link, .button--form, .button--play {
+  display: inline-block;
+  min-width: 110px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 2px solid #eab649;
+  vertical-align: baseline;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: #eab649; }
+  /* line 19, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .button:hover, .button--link:hover, .button--form:hover, .button--play:hover {
+    border-color: #f07118;
+    background-color: #f07118; }
+
+/* line 23, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+.button--link {
+  color: #eab649;
+  background-color: transparent; }
+  /* line 27, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .button--link:hover {
+    color: #f07118;
+    border-color: #f07118;
+    background-color: transparent; }
+
+/* line 32, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+.button--form {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  background-color: #5b9acb;
+  border-color: #5b9acb; }
+  /* line 39, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .button--form:hover {
+    background-color: #1b5c8c;
+    border-color: #1b5c8c; }
+  /* line 42, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .field-value--withAction .button--form {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 0; }
+
+/* line 47, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+.button--play {
+  width: 108px;
+  height: 108px;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  border: none;
+  text-indent: -100em;
+  overflow: hidden;
+  background-size: 100%;
+  background-color: transparent;
+  background-size: 100%;
+  background-position: center center;
+  opacity: 0.8; }
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    /* line 47, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+    .button--play {
+      background-image: url("../images/presentation/icon-play@2x.png"); } }
+  @media screen and (-webkit-max-device-pixel-ratio: 1.9), screen and (max-resolution: 191dpi) {
+    /* line 47, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+    .button--play {
+      background-image: url("../images/presentation/icon-play.png"); } }
+  /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/globals/_mixins.sass */
+  .lt-ie9 .button--play {
+    background-image: url("../images/presentation/icon-play.png"); }
+  /* line 62, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .button--play:hover {
+    opacity: 1;
+    background-color: transparent; }
+  @media (max-width: 500px) {
+    /* line 47, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+    .button--play {
+      width: 72px;
+      height: 72px; } }
+
+/* line 69, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+.link {
+  text-decoration: none;
+  color: #f07118; }
+  /* line 72, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .link:hover {
+    text-decoration: underline; }
+  /* line 74, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .form .link {
+    color: #413e3b; }
+
+/* line 77, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+.cta {
+  display: block;
+  text-align: center; }
+  /* line 80, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_button.sass */
+  .page-banner-message .cta {
+    margin-bottom: -36px; }
+
+/* ------------------------------------------- */
+/* Person                                      */
+/* ------------------------------------------- */
+/* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_person.sass */
+.person {
+  display: inline-block;
+  width: 240px;
+  margin: 24px 0;
+  vertical-align: top; }
+
+/* line 12, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_person.sass */
+.person-image {
+  width: auto;
+  height: 168px;
+  border-radius: 100%;
+  margin: 12px auto; }
+
+/* line 24, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_person.sass */
+.person-list {
+  padding: 60px 0;
+  text-align: center; }
+
+/* ------------------------------------------- */
+/* Chosen Select Box                           */
+/* ------------------------------------------- */
+/* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+.chosen-container {
+  position: relative;
+  display: block;
+  max-width: 825px;
+  padding-bottom: 12px;
+  padding-right: 65px;
+  margin: 36px auto;
+  border: none;
+  border-bottom: 1px solid #cec9c5;
+  outline: none;
+  background-size: 68px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: #413e3b; }
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+    /* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+    .chosen-container {
+      background-image: url("../images/presentation/icon-magnifier@2x.png"); } }
+  @media screen and (-webkit-max-device-pixel-ratio: 1.9), screen and (max-resolution: 191dpi) {
+    /* line 6, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+    .chosen-container {
+      background-image: url("../images/presentation/icon-magnifier.png"); } }
+  /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/globals/_mixins.sass */
+  .lt-ie9 .chosen-container {
+    background-image: url("../images/presentation/icon-magnifier.png"); }
+  /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+  .chosen-container:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    width: 27px;
+    height: 27px;
+    background-color: white;
+    border-radius: 100px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: -1px -1px; }
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+      /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+      .chosen-container:after {
+        background-image: url("../images/presentation/icon-spinner@2x.png"); } }
+    @media screen and (-webkit-max-device-pixel-ratio: 1.9), screen and (max-resolution: 191dpi) {
+      /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+      .chosen-container:after {
+        background-image: url("../images/presentation/icon-spinner.png"); } }
+    /* line 20, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/globals/_mixins.sass */
+    .lt-ie9 .chosen-container:after {
+      background-image: url("../images/presentation/icon-spinner.png"); }
+  /* line 33, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+  .chosen-container.is-loading:after {
+    -webkit-animation: spin 0.5s linear infinite; }
+
+/* line 42, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+.chosen-choices {
+  list-style: none; }
+  /* line 45, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+  .chosen-choices input {
+    border: none;
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: inherit;
+    background-color: transparent;
+    outline: none; }
+
+/* line 56, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+.chosen-drop {
+  position: absolute;
+  top: 100%;
+  margin-top: 1px;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 20px;
+  max-height: 600px;
+  overflow: auto;
+  background-color: white;
+  box-sizing: border-box; }
+  /* line 69, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+  .chosen-container-active .chosen-drop, .chosen-container:focus .chosen-drop {
+    display: block; }
+
+/* line 73, /Users/mohanad/Dropbox/Work/Nulogy/Code/Static/facepage/source/stylesheets/components/_chosen.sass */
+.chosen-results {
+  list-style: none; }

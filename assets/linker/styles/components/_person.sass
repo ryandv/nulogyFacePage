@@ -1,0 +1,25 @@
+/* ------------------------------------------- */
+/* Person                                      */
+/* ------------------------------------------- */
+
+.person
+  display: inline-block
+  width: grid-cols(4)
+  margin: vertical-units(2) 0
+  vertical-align: top
+
+.person-image
+  width: auto
+  height: vertical-units(14)
+  border-radius: 100%
+  margin: vertical-units(1) auto
+
+.person-name, .person-team
+  @extend %ellipsis
+
+.person-name
+  @extend .body-text
+
+.person-list
+  padding: vertical-units(5) 0
+  text-align: center

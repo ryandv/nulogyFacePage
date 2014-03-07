@@ -64,6 +64,8 @@ module.exports = function (grunt) {
     'bower_components/bootstrap/dist/js/bootstrap.js',
     'bower_components/angular/angular.js',
     'bower_components/underscore/underscore.js',
+    'bower_components/select2/select2.js',
+    'bower_components/angular-ui-select2/src/select2.js',
     'linker/js/**/*.js'
   ];
 
@@ -138,6 +140,7 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-cssmin/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-coffee/tasks');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Project configuration.
   grunt.initConfig({

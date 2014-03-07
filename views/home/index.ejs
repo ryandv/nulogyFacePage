@@ -1,4 +1,21 @@
-<div id="employee-directory-container" class="container" ng-app="nulogyFacePageApp" ng-controller="DirectoryCtrl">
+<div ng-controller="DirectoryCtrl">
+
+  <select ui-select2 ng-model="selectedProject">
+    <option ng-repeat="project in projects">{{ project.name }}</option>
+  </select>
+
+  <ul class="person-list" ng-app="nulogyFacePageApp">
+    <li class="person" ng-repeat="employee in employees">
+    <img src="http://api.randomuser.me/0.3.1/portraits/men/2.jpg" alt="" class="person-image">
+    <p class="person-name">{{ employee.firstName }} {{ employee.lastName }}</p>
+    <p class="person-team">{{ employee.department }}</p>
+    </li>
+  </ul>
+</div>
+<!--<div id="employee-directory-container" class="container" ng-app="nulogyFacePageApp" ng-controller="DirectoryCtrl">
+  <select ui-select2 ng-model="selectedProject">
+    <option ng-repeat="project in projects">{{ project.name }}</option>
+  </select>
   <ul>
     <li>
 
@@ -18,4 +35,4 @@
 
     </li>
   </ul>
-</div>
+</div>-->

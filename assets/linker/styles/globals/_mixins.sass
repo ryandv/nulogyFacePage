@@ -1,0 +1,59 @@
+// ------------------------------------------- 
+// Mixins
+// ------------------------------------------- 
+
+@mixin hi-res
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi)
+    @content
+
+@mixin not-hi-res
+  @media screen and (-webkit-max-device-pixel-ratio: 1.9), screen and (max-resolution: 191dpi)
+    @content
+
+@mixin bg-img($img-name, $img-size: "")
+  @if $img-size != ""
+    background-size: $img-size
+  +hi-res
+    background-image: url('../images/presentation/#{$img-name}@2x.png')
+  +not-hi-res
+    background-image: url('../images/presentation/#{$img-name}.png')
+  .lt-ie9 &
+    background-image: url('../images/presentation/#{$img-name}.png')
+
+@mixin prefix($property, $value, $prefix-value: false)
+  @if $prefix-value
+    -webkit-#{$property}: -webkit-#{$value}
+    -moz-#{$property}: -moz-#{$value}
+    -o-#{$property}: -o-#{$value}
+    -ms-#{$property}: -ms-#{$value}
+    #{$property}: $value
+  @else
+    -webkit-#{$property}: $value
+    -moz-#{$property}: $value
+    -o-#{$property}: $value
+    -ms-#{$property}: $value
+    #{$property}: $value
+
+@mixin webkit
+  @media screen and (-webkit-min-device-pixel-ratio: 0)
+    @content
+
+@mixin desktop 
+  @media (max-width: $bp-desktop)
+    @content
+
+@mixin notebook 
+  @media (max-width: $bp-notebook)
+    @content
+
+@mixin tablet 
+  @media (max-width: $bp-tablet)
+    @content
+
+@mixin miniTablet 
+  @media (max-width: $bp-miniTablet)
+    @content
+
+@mixin phone 
+  @media (max-width: $bp-phone)
+    @content

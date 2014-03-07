@@ -1,0 +1,9 @@
+// ------------------------------------------- 
+// Variables
+// ------------------------------------------- 
+
+@function vertical-units($factor: 1)
+  @return $vertical-unit * $factor
+
+@function grid_cols($no-of-cols)
+  @return ($grid-column * $no-of-cols) + ($grid-gutter * ($no-of-cols - 1))

@@ -1,0 +1,154 @@
+/* ------------------------------------------- */
+/* Typography                                  */
+/* ------------------------------------------- */
+
+body 
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+  font-weight: 400
+  color: $nutral-dark
+  text-align: left
+  line-height: vertical-units(2)
+
+/*-- Body Text ------------------------------- */ 
+%large-text, .intro-text, .body-text, .sub-text
+  // margin-bottom: vertical-units(2)
+
+%large-text
+  font-size: 24px
+  line-height: vertical-units(3)
+  font-weight: 300
+
+.intro-text
+  font-size: 22px
+  line-height: vertical-units(3)
+  @media (max-width: $bp-phone)
+    font-size: 18px
+    line-height: vertical-units(2)
+
+.body-text
+  font-size: 18px
+  line-height: vertical-units(2)
+  @media (max-width: $bp-phone)
+    font-size: 16px
+
+.sub-text 
+  font-size: 16px
+  line-height: vertical-units(2)
+
+.small-text
+  font-size: 14px
+  line-height: vertical-units(2)
+
+.fine-print
+  font-size: 12px
+  line-height: vertical-units(1)
+  margin: vertical-units(0.5) auto
+
+/*-- Headings -------------------------------- */
+.page-heading, .section-heading, .sub-heading, .small-heading
+  font-family: Domine, Georgia, serif
+  font-weight: 100
+  letter-spacing: -1px
+  color: $primary-color
+
+.page-heading
+  font-size: 42px
+  letter-spacing: -2px
+  line-height: vertical-units(5)
+  margin-bottom: vertical-units(1)
+  @media (max-width: $bp-phone)
+    font-size: 36px
+    letter-spacing: -1px
+    line-height: vertical-units(4)
+
+.section-heading
+  font-size: 36px
+  line-height: vertical-units(4)
+  @media (max-width: $bp-phone)
+    font-size: 30px
+    line-height: vertical-units(3)
+
+.sub-heading
+  font-size: 24px
+  line-height: vertical-units(3)
+
+.small-heading
+  font-size: 20px
+  line-height: vertical-units(2)
+
+/*-- Banner Text ----------------------------- */
+.banner-text
+  font-size: 48px
+  line-height: vertical-units(5)
+  font-weight: 300
+  @media (max-width: $bp-notebook)
+    font-size: 40px
+    line-height: vertical-units(4)
+  @media (max-width: $bp-miniTablet)
+    font-size: 36px
+    line-height: vertical-units(3)
+  @media (max-width: $bp-phone)
+    font-size: 28px
+    line-height: vertical-units(3)
+
+.banner-sub-text
+  font-size: 36px
+  line-height: vertical-units(4)
+  font-weight: 300
+  @media (max-width: $bp-phone)
+    font-size: 28px
+    line-height: vertical-units(3)
+
+/*-- Stats Text ------------------------------ */
+%big-numbers
+  font-family: "Fjalla One", sans-serif
+  font-size: 48px
+  line-height: vertical-units(4)
+  letter-spacing: -1px
+
+/*-- Block Quote ----------------------------- */
+.blockquote
+  @extend .body-text
+  font-style: italic
+  margin-left: grid-cols(1)
+  margin-bottom: vertical-units(3)
+  padding-left: grid-cols(1)
+  padding-right: grid-cols(1)
+  +bg-img("icon-quote")
+  background-size: 45px
+  background-repeat: no-repeat
+  background-position: -8px -8px
+  @media (max-width: $bp-phone)
+    margin-left: 0
+    padding: 0
+    padding-top: vertical-units(4)
+    background-position: center top
+
+/*-- OR -------------------------------------- */
+.or
+  font-size: 14px
+  display: block
+  width: grid-cols(1)
+  margin: 0 auto
+  padding: (vertical-units(0.5) - 1px) 0
+  margin-bottom: vertical-units(3)
+  line-height: vertical-units(2)
+  text-transform: uppercase
+  font-style: italic
+  font-weight: bold
+  border-top: 1px solid $nutral-dark
+  border-bottom: 1px solid $nutral-dark
+
+/*-- Text Selection Colors ------------------- */
+::-moz-selection
+  background-color: #FFA
+  color: #000
+
+::selection
+  background-color: #FFA
+  color: #000
+
+
+// vertical rhythm lines
+// body, .page-header
+  // background-image: url('../images/vertical-rhythm-test.png')
