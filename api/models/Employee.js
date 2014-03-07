@@ -13,6 +13,7 @@ module.exports = {
     department: "string",
     email: "string",
     nulogyBirthday: "datetime",
+    displayPicturePath: "string",
 
     workedOn: {
       collection: "project",
