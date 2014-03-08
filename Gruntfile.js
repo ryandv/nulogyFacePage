@@ -31,7 +31,9 @@ module.exports = function (grunt) {
   var cssFilesToInject = [
     'linker/styles/all.css',
     'linker/styles/select2.css',
-    'bower_components/**/dist/**/*.css'
+    'bower_components/**/dist/**/*.css',
+    'bower_components/animate.css/animate.css',
+    'linker/styles/ngAnimations.css',
   ];
 
 
@@ -64,6 +66,7 @@ module.exports = function (grunt) {
     'bower_components/jquery/dist/jquery.js',
     'bower_components/bootstrap/dist/js/bootstrap.js',
     'bower_components/angular/angular.js',
+    'bower_components/angular-animate/angular-animate.js',
     'bower_components/underscore/underscore.js',
     'bower_components/select2/select2.js',
     'bower_components/angular-ui-select2/src/select2.js',

@@ -1,4 +1,4 @@
-var nulogyFacePageApp = angular.module("nulogyFacePageApp", ["ui.select2"]);
+var nulogyFacePageApp = angular.module("nulogyFacePageApp", ["ui.select2", "ngAnimate"]);
 
 nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($scope, $http) {
 
@@ -14,7 +14,6 @@ nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($sco
   });
 
   $scope.filterEmployees = function() {
-    console.log($scope.selectedProjects);
     $http.get("employee/filter?project=" + $scope.selectedProjects.join("&project=")).success(
       function(data, status, headers, config) {
       $scope.employees = data;
