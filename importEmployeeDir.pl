@@ -17,7 +17,8 @@ while (<>) {
         "email" => "",
         "nulogyBirthday" => ""
     );
-    my $response = $ua->post("http://192.168.50.103:1337/employee/create",[%info]);
+    my $response = $ua->post("http://localhost:1337/employee/create",[%info]);
+    #my $response = $ua->post("http://192.168.50.103:1337/employee/create",[%info]);
     print Dumper($response->as_string());
     #print Dumper(\%info);
 }

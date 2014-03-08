@@ -7,6 +7,8 @@
 
 module.exports = {
 
+  identity: "project",
+
   attributes: {
     name: "string",
 

@@ -7,6 +7,8 @@
 
 module.exports = {
 
+  identity: "employee",
+
   attributes: {
     lastName: "string",
     firstName: "string",

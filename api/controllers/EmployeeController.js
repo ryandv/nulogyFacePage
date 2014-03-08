@@ -8,8 +8,16 @@
 module.exports = {
 
   filter: function(req, res) {
-    Employee.find().where({ workedOn: { contains: req.param("project") } }).then(function(employees) {
-      res.json(employees);
+    employee.find().populate("workedOn").then(function(results) {
+      var projects = typeof req.param("project") === "string" ? [req.param("project")] : req.param("project");
+      var foo = _.filter(results, function(anEmployee) {
+        console.log(anEmployee.workedOn[0]);
+        return _.some(projects, function(aProject) {
+          console.log("    " + aProject);
+          return _.contains(_.map(anEmployee.workedOn, function(project) { return project.name; }), aProject);
+        });
+      });
+      res.json(foo);
     });
   }
 

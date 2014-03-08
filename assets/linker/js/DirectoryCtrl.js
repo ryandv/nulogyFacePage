@@ -1,6 +1,7 @@
 var nulogyFacePageApp = angular.module("nulogyFacePageApp", ["ui.select2"]);
 
 nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($scope, $http) {
+
   $http.get("employee/").success(function(data) {
     $scope.employees = data;
   });
@@ -13,9 +14,9 @@ nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($sco
   });
 
   $scope.filterEmployees = function() {
-    $http.get("employee/filter", {
-      project: $scope.selectedProject
-    }).success(function(data, status, headers, config) {
+    console.log($scope.selectedProjects);
+    $http.get("employee/filter?project=" + $scope.selectedProjects.join("&project=")).success(
+      function(data, status, headers, config) {
       $scope.employees = data;
     });
   };

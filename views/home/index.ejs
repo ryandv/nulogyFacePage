@@ -1,7 +1,7 @@
 <div ng-controller="DirectoryCtrl" ng-app="nulogyFacePageApp">
 
   <form role="form" ng-keyup="$event.keyCode == 13 ? filterEmployees() : null">
-    <select multiple ui-select2="select2Options" ng-model="selectedProject">
+    <select multiple ui-select2="select2Options" ng-model="selectedProjects">
       <option ng-repeat="project in projects">{{ project.name }}</option>
     </select>
   </form>
