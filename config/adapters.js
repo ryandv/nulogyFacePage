@@ -26,7 +26,8 @@ module.exports.adapters = {
 
   postgres: {
     module: 'sails-postgresql',
-    host: process.env.DATABASE_URL,
+    database: 'delkbssag5kmrm',
+    host: 'ec2-174-129-197-200.compute-1.amazonaws.com',
     user: 'kjdzpwftwpshdd',
     password: 'TXoUVA7HUUkzKLp9meQhyfU50e',
     port: 5432
