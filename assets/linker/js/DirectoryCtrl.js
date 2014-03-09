@@ -31,7 +31,7 @@ nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($sco
 
   function getAllEmployees() {
     $http.get("employee/").success(function(data) {
-      $scope.employees = data;
+      $scope.employees = _.sortBy(data, function(employee) { return employee.lastName; });
     });
   }
 }]);
