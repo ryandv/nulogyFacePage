@@ -21,6 +21,12 @@ module.exports = {
       collection: "project",
       via: "contributors",
       dominant: true
+    },
+
+    workedFor: {
+      collection: "customer",
+      via: "contributors",
+      dominant: true
     }
 
   }

@@ -7,8 +7,17 @@
 
 module.exports = {
 
+  identity: "customer",
+
   attributes: {
-    name: "string"
+    name: "string",
+
+    contributors: {
+      collection: "employee",
+      via: "workedFor",
+      dominant: false
+    }
   }
+
 
 };

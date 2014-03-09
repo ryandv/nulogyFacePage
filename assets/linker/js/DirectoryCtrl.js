@@ -18,12 +18,12 @@ nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($sco
 
   $scope.filterEmployees = function() {
 
-    if ($scope.selectedProjects.length === 0) {
+    if ($scope.selectedTags.length === 0) {
       getAllEmployees();
       return;
     }
 
-    $http.get("employee/filter?project=" + $scope.selectedProjects.join("&project=")).success(
+    $http.get("employee/filter?tag=" + $scope.selectedTags.join("&tag=")).success(
       function(data, status, headers, config) {
       $scope.employees = data;
     });

@@ -8,11 +8,11 @@
 module.exports = {
 
   filter: function(req, res) {
-    employee.find().populate("workedOn").then(function(results) {
-      var projects = typeof req.param("project") === "string" ? [req.param("project")] : req.param("project");
+    employee.find().populate("workedOn").populate("workedFor").then(function(results) {
+      var tags = typeof req.param("tag") === "string" ? [req.param("tag")] : req.param("tag");
       var foo = _.filter(results, function(anEmployee) {
-        return _.some(projects, function(aProject) {
-          return _.contains(_.map(anEmployee.workedOn, function(project) { return project.name; }), aProject);
+        return _.some(tags, function(tag) {
+          return _.contains(_.map(anEmployee.workedOn.concat(anEmployee.workedFor), function(relation) { return relation.name; }), tag);
         });
       });
       res.json(foo);
