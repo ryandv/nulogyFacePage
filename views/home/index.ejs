@@ -1,10 +1,13 @@
 <div ng-controller="DirectoryCtrl" ng-app="nulogyFacePageApp">
 
-  <form role="form" ng-keyup="$event.keyCode == 13 ? filterEmployees() : null">
-    <select multiple ui-select2="select2Options" ng-model="selectedProjects">
-      <option ng-repeat="project in projects">{{ project.name }}</option>
+    <select multiple ui-select2="select2Options" ng-model="selectedProjects" ng-change="filterEmployees()" style="width: 100%">
+      <optgroup label="Projects">
+        <option ng-repeat="project in projects">{{ project.name }}</option>
+      </optgroup>
+      <optgroup label="Customers">
+        <option ng-repeat="customer in customers">{{ customer.name }}</option>
+      </optgroup>
     </select>
-  </form>
 
   <ul class="person-list">
     <li class="person" ng-repeat="employee in employees">
