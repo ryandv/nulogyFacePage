@@ -7,15 +7,22 @@
 
 module.exports = {
 
-  filter: function(req, res) {
+  find: function(req, res) {
+    console.log("foobar");
     employee.find().populate("workedOn").populate("workedFor").then(function(results) {
-      var tags = typeof req.param("tag") === "string" ? [req.param("tag")] : req.param("tag");
-      var foo = _.filter(results, function(anEmployee) {
-        return _.some(tags, function(tag) {
-          return _.contains(_.map(anEmployee.workedOn.concat(anEmployee.workedFor), function(relation) { return relation.name; }), tag);
+      var response = _.map(results, function(employee) {
+        employee.tags = [];
+        _.map(employee.workedOn.concat(employee.workedFor), function(relation) {
+          employee.tags.push(relation.name);
         });
+        return employee;
       });
-      res.json(foo);
+      //var foo = _.filter(results, function(anEmployee) {
+      //  return _.some(tags, function(tag) {
+      //    return _.contains(_.map(anEmployee.workedOn.concat(anEmployee.workedFor), function(relation) { return relation.name; }), tag);
+      //  });
+      //});
+      res.json(response);
     });
   }
 

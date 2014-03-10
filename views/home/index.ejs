@@ -10,7 +10,7 @@
     </select>
 
   <ul class="person-list">
-    <li class="person" ng-repeat="employee in employees">
+    <li class="person" ng-repeat="employee in employees" ng-class="{'is-inactive': !isSelected(employee)}">
     <img ng-src="{{ employee.displayPicturePath && 'images/' + employee.displayPicturePath || 'http://api.randomuser.me/0.3.1/portraits/men/2.jpg' }}" alt="" class="person-image">
     <p class="person-name">{{ employee.firstName }} {{ employee.lastName }}</p>
     <p class="person-team">{{ employee.department }}</p>

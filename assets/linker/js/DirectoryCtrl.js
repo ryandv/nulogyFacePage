@@ -16,17 +16,14 @@ nulogyFacePageApp.controller("DirectoryCtrl", ["$scope", "$http", function ($sco
     $scope.customers = data;
   });
 
-  $scope.filterEmployees = function() {
-
-    if ($scope.selectedTags.length === 0) {
-      getAllEmployees();
-      return;
+  $scope.isSelected = function(employee) {
+    if ($scope.selectedTags.length == 0) {
+      return true;
+    } else {
+      return _.some($scope.selectedTags, function(tag) {
+        return _.contains(employee.tags, tag);
+      });
     }
-
-    $http.get("employee/filter?tag=" + $scope.selectedTags.join("&tag=")).success(
-      function(data, status, headers, config) {
-      $scope.employees = data;
-    });
   };
 
   function getAllEmployees() {
